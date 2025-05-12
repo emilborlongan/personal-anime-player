@@ -1,4 +1,7 @@
-import { Container } from '@mantine/core';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from '@/pages/Home';
+import Watch from '@/pages/Watch'
+
 import styles from '@/styles/App.module.scss';
 
 export default function App() {
@@ -9,10 +12,12 @@ export default function App() {
       </header>
 
       <main className={styles.main}>
-        <Container>
-          {/* Routing or content goes here */}
-          <p>Welcome! Start building your anime player here.</p>
-        </Container>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/watch/:episodeId" element={<Watch />} />
+          </Routes>
+        </Router>
       </main>
     </>
   );

@@ -1,0 +1,17 @@
+.card {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    background-color: #1e1e1e;
+  
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  
+  .title {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+  }
+  
